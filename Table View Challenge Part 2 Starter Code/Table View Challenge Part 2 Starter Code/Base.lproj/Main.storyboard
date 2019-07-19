@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Table_View_Challenge_Part_2_Starter_Code" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0WW-cI-SXg">
+                                <rect key="frame" x="30" y="235" width="315" height="402"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="Mqy-vC-RJe">
+                                        <rect key="frame" x="0.0" y="28" width="315" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mqy-vC-RJe" id="DOH-sJ-1aG">
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="VIa-M2-gLa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bgA-BD-QWa"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdS-AV-diT" userLabel="catButton">
+                                <rect key="frame" x="80" y="100" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="A0C-nz-tbL"/>
+                                    <constraint firstAttribute="height" constant="75" id="UZi-C2-e7b"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chocolateIceCream"/>
+                                <connections>
+                                    <action selector="chocolateButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pos-fB-ct0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wj9-Ve-Ov7" userLabel="dogButton">
+                                <rect key="frame" x="220" y="100" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Rlc-qD-Cjn"/>
+                                    <constraint firstAttribute="height" constant="75" id="j0B-FA-xHz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="strawberryIceCream"/>
+                                <connections>
+                                    <action selector="strawberryButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPU-Bw-oD5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS4-VC-NUm">
+                                <rect key="frame" x="162" y="50" width="51" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0WW-cI-SXg" secondAttribute="trailing" constant="30" id="12k-u9-eQz"/>
+                            <constraint firstItem="GS4-VC-NUm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5Oq-Vc-GfZ"/>
+                            <constraint firstItem="wj9-Ve-Ov7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="8U3-e7-DST"/>
+                            <constraint firstItem="0WW-cI-SXg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9n9-Fw-6wG"/>
+                            <constraint firstItem="AdS-AV-diT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="IKB-yt-WQ6"/>
+                            <constraint firstItem="0WW-cI-SXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Knm-EI-uNz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wj9-Ve-Ov7" secondAttribute="trailing" constant="80" id="UN1-vP-WRL"/>
+                            <constraint firstItem="AdS-AV-diT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Wcz-Mk-Ncb"/>
+                            <constraint firstItem="GS4-VC-NUm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mzV-2c-2Bx"/>
+                            <constraint firstItem="0WW-cI-SXg" firstAttribute="top" secondItem="AdS-AV-diT" secondAttribute="bottom" constant="60" id="ugM-uS-5Sb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0WW-cI-SXg" secondAttribute="bottom" constant="30" id="vfc-Xi-aif"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myTableView" destination="0WW-cI-SXg" id="naT-4X-c0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chocolateIceCream" width="512" height="512"/>
+        <image name="strawberryIceCream" width="512" height="512"/>
+    </resources>
+</document>

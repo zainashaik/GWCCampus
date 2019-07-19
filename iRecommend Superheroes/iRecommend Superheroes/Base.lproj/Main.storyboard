@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-gM-gzl">
+                                <rect key="frame" x="-12.666666666666657" y="209.99999999999997" width="400.33333333333326" height="392.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marvel Superheroes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTC-2x-NQX">
+                                        <rect key="frame" x="0.0" y="0.0" width="400.33333333333331" height="46.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="He2-hT-vvC"/>
+                                            <constraint firstAttribute="height" constant="46.329999999999998" id="Pvg-g7-qpo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avengers" translatesAutoresizingMaskIntoConstraints="NO" id="tMH-8i-Pug">
+                                        <rect key="frame" x="100.33333333333334" y="99.333333333333314" width="200.00000000000003" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="71D-Y9-OmC"/>
+                                            <constraint firstAttribute="height" constant="200" id="LU9-lE-rdA"/>
+                                            <constraint firstAttribute="width" secondItem="tMH-8i-Pug" secondAttribute="height" multiplier="1:1" id="yxh-Hr-1aI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOa-7j-sS3">
+                                        <rect key="frame" x="83.666666666666686" y="352.33333333333337" width="233" height="40"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                        <state key="normal" title="What superhero are you?">
+                                            <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ogs-2c-QHm" kind="show" id="Umn-OU-cc5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17240742403550066" green="0.19962340513190852" blue="0.66568167098445596" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <constraints>
+                            <constraint firstItem="Yxs-gM-gzl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oJI-Xt-1ca"/>
+                            <constraint firstItem="Yxs-gM-gzl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zgJ-dt-Ot6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.19999999999999" y="111.57635467980296"/>
+        </scene>
+        <!--Second Screen Randomizer View Controller-->
+        <scene sceneID="B6F-y9-yJh">
+            <objects>
+                <viewController id="ogs-2c-QHm" customClass="SecondScreenRandomizerViewController" customModule="iRecommend_Superheroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yuc-Vy-Xqx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLG-r1-Ep0">
+                                <rect key="frame" x="71" y="535" width="233" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BLP-sp-Idc"/>
+                                    <constraint firstAttribute="width" constant="233" id="bEa-uf-QR9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                <state key="normal" title="What superhero are you?">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="superbutton:" destination="ogs-2c-QHm" eventType="touchUpInside" id="683-J6-WNP"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hxV-PK-3cl">
+                                <rect key="frame" x="67" y="157" width="240" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="S5b-rA-lx3"/>
+                                    <constraint firstAttribute="height" constant="313" id="bE9-fH-GQV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31415965025906734" green="0.058293215267337661" blue="0.057848198654142931" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <constraints>
+                            <constraint firstItem="hxV-PK-3cl" firstAttribute="centerX" secondItem="yuc-Vy-Xqx" secondAttribute="centerX" id="3ca-Ad-Cq2"/>
+                            <constraint firstItem="T7h-PH-po0" firstAttribute="trailing" secondItem="cLG-r1-Ep0" secondAttribute="trailing" constant="71" id="7Z5-XO-ylV"/>
+                            <constraint firstItem="hxV-PK-3cl" firstAttribute="leading" secondItem="T7h-PH-po0" secondAttribute="leading" constant="67" id="9pI-EU-Wxp"/>
+                            <constraint firstItem="T7h-PH-po0" firstAttribute="trailing" secondItem="hxV-PK-3cl" secondAttribute="trailing" constant="68" id="AIm-9e-GBR"/>
+                            <constraint firstItem="cLG-r1-Ep0" firstAttribute="leading" secondItem="T7h-PH-po0" secondAttribute="leading" constant="71" id="PEm-lS-XPK"/>
+                            <constraint firstItem="hxV-PK-3cl" firstAttribute="top" secondItem="T7h-PH-po0" secondAttribute="top" constant="113" id="big-nW-lm3"/>
+                            <constraint firstItem="cLG-r1-Ep0" firstAttribute="top" secondItem="hxV-PK-3cl" secondAttribute="bottom" constant="65" id="lll-qy-gwl"/>
+                            <constraint firstItem="T7h-PH-po0" firstAttribute="bottom" secondItem="cLG-r1-Ep0" secondAttribute="bottom" constant="203" id="rmU-ud-uhr"/>
+                            <constraint firstItem="cLG-r1-Ep0" firstAttribute="centerX" secondItem="yuc-Vy-Xqx" secondAttribute="centerX" id="utI-0z-cey"/>
+                            <constraint firstItem="cLG-r1-Ep0" firstAttribute="top" secondItem="hxV-PK-3cl" secondAttribute="bottom" constant="65" id="ydS-vj-mp8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T7h-PH-po0"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainImage" destination="hxV-PK-3cl" id="1hz-qo-dxc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pbm-id-YqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600.79999999999995" y="111.57635467980296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avengers" width="512" height="512"/>
+    </resources>
+</document>
